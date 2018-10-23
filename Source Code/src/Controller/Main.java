@@ -157,6 +157,7 @@ public class Main {
 	public static void getLimits() throws IOException{
 		URL url = new URL("https://www.ge-tracker.com/osrs-item-list/0");
 		URLConnection urlConn = url.openConnection();
+		urlConn.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
 		InputStreamReader inStream = new InputStreamReader(urlConn.getInputStream());
 		BufferedReader buff = new BufferedReader(inStream);
 		//String price = "not found";
